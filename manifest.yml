@@ -1,0 +1,20 @@
+modules:
+  jira:issuePanel:
+    - key: sentiment-analysis-for-jira-comments-hello-world-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: Sentiment analysis for Jira Issue comments
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+permissions:
+  scopes:
+    - read:jira-work
+app:
+  id: ari:cloud:ecosystem::app/f392a651-a627-412d-8494-1cca1f4d7293
